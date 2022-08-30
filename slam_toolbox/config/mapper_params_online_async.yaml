@@ -5,7 +5,7 @@ ceres_preconditioner: SCHUR_JACOBI
 ceres_trust_strategy: LEVENBERG_MARQUARDT
 ceres_dogleg_type: TRADITIONAL_DOGLEG
 ceres_loss_function: None
-
+#test
 # ROS Parameters
 odom_frame: odom
 map_frame: map
