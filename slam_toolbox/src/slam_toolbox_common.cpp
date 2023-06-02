@@ -415,9 +415,8 @@ bool SlamToolbox::shouldProcessScan(
 {
   static karto::Pose2 last_pose;
   static ros::Time last_scan_time = ros::Time(0.);
-  static double min_dist2 =
-    smapper_->getMapper()->getParamMinimumTravelDistance() *
-    smapper_->getMapper()->getParamMinimumTravelDistance();
+  static const double dist_thresh_sq = smapper_->getMapper()->getParamMinimumTravelDistance()*
+                                       smapper_->getMapper()->getParamMinimumTravelDistance();
 
   // we give it a pass on the first measurement to get the ball rolling
   if (first_measurement_)

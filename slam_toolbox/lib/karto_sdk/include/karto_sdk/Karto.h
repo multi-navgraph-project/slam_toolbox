@@ -4370,7 +4370,7 @@ namespace karto
         residual = 0;
       }
       m_NumberOfRangeReadings = static_cast<kt_int32u>(math::Round((GetMaximumAngle() -
-                                                                    GetMinimumAngle())
+                                                                    GetMinimumAngle()-GetAngularResolution())
                                                                     / GetAngularResolution()) + residual);
     }
 
@@ -5581,7 +5581,6 @@ namespace karto
     inline void SetCorrectedPoseAndUpdate(const Pose2& rPose)
     {
       SetCorrectedPose(rPose);
-
       Update();
     }
 

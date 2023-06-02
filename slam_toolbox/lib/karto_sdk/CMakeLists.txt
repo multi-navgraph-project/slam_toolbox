@@ -24,7 +24,11 @@ catkin_package(
 
 add_definitions(${EIGEN3_DEFINITIONS})
 
+<<<<<<< HEAD
 include_directories(include ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS} ${TBB_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
+=======
+include_directories(include ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS} ${TBB_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
+>>>>>>> 19eee12
 add_library(kartoSlamToolbox SHARED src/Karto.cpp src/Mapper.cpp)
 target_link_libraries(kartoSlamToolbox ${Boost_LIBRARIES} ${TBB_LIBRARIES})
 

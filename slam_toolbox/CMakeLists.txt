@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
-project(slam_toolbox)
+project(slam_toolbox LANGUAGES CXX)
 
+set(CMAKE_BUILD_TYPE Release) #None, Debug, Release, RelWithDebInfo, MinSizeRel
 add_compile_options(-std=c++17)
 set(CMAKE_BUILD_TYPE Release) #None, Debug, Release, RelWithDebInfo, MinSizeRel
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/CMake/")
@@ -39,7 +40,6 @@ find_package(G2O REQUIRED)
 find_package(Cholmod REQUIRED)
 find_package(LAPACK REQUIRED)
 find_package(Ceres REQUIRED COMPONENTS SuiteSparse)
-find_package(rostest REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 add_definitions(-DQT_NO_KEYWORDS)
